@@ -17,7 +17,7 @@ const About = () => {
             </p>
             <div className="flex gap-4">
               {/* Download CV Button */}
-              <a href="Harsha_ds.pdf" download className="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800">
+              <a href="/Harsha_ds.pdf" download className="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800">
                 Download CV
               </a>
 
