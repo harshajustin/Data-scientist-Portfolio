@@ -33,7 +33,7 @@ const ContactForm = () => {
 
     try {
       // Send data to the backend
-      await axios.post('https://data-scientits-portfolio.onrender.com', formData, {
+      await axios.post('https://data-scientits-portfolio.onrender.com/send-email', formData, {
         headers: {
           'Content-Type': 'application/json',
         },
