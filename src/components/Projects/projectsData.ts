@@ -6,7 +6,7 @@ export const projects = [
     category: 'Generative AI',
     tools: ['Gemini','Streamlit', 'Docker'],
     github: "https://github.com/harshajustin/ATS-Resume-Expert",
-    demo: 'https://github.com/harshajustin/ATS-Resume-Expert'
+    demo: 'https://www.linkedin.com/feed/update/urn:li:activity:7275429042898587648/'
   },
   {
     title: 'Anurag GPT',
