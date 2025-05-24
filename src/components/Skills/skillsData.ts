@@ -1,34 +1,29 @@
-import { Code, Brain, BarChart3, Database, Server, Calculator } from 'lucide-react';
+import { Code, Brain, BarChart3, Database, Users } from 'lucide-react';
 
 export const skillsData = [
   {
     icon: Code,
     title: 'Programming Languages',
-    skills: ['Python', 'SQL', 'JavaScript']
+    skills: ['Java', 'Python', 'C', 'SQL']
   },
   {
     icon: Brain,
-    title: 'Machine Learning/AI',
-    skills: ['TensorFlow', 'Scikit-learn', 'XGBoost', 'Computer Vision']
-  },
-  {
-    icon: BarChart3,
-    title: 'Data Visualization',
-    skills: ['Matplotlib', 'Power BI', 'Seaborn']
-  },
-  {
-    icon: Server,
-    title: 'Big Data Technologies*',
-    skills: ['Spark', 'Hadoop', 'Kafka', 'Airflow', 'Docker']
+    title: 'Frameworks & Technologies',
+    skills: ['Hugging Face Transformers', 'PhiData', 'MLflow', 'Docker', 'Git', 'Github', 'Power BI']
   },
   {
     icon: Database,
     title: 'Databases',
-    skills: ['MySql', 'MongoDB', 'AWS']
+    skills: ['AWS', 'PostgreSQL', 'MySQL']
   },
   {
-    icon: Calculator,
-    title: 'Statistical Analysis',
-    skills: ['Hypothesis Testing', 'A/B Testing', 'Regression Analysis', 'Time Series']
+    icon: Users,
+    title: 'Collaboration Tools',
+    skills: ['Notion', 'Microsoft Loop', 'Microsoft Teams']
+  },
+  {
+    icon: BarChart3,
+    title: 'Relevant Coursework',
+    skills: ['Natural Language Processing (NLP)', 'Data Analysis and Visualization', 'Generative AI', 'Applied Statistics for Machine Learning', 'Version Control Systems (Git)', 'Deep Learning (Transformers)']
   }
 ];

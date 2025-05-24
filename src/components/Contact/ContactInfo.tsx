@@ -1,28 +1,91 @@
-import { Mail, Linkedin, Github, Code2 } from 'lucide-react';
+import React from 'react';
+import { Mail, Linkedin, Github, Code2, MapPin, Calendar, Clock } from 'lucide-react';
 
 const contactLinks = [
-  { icon: Mail, text: 'harshajustin2@gmail.com', href: 'mailto:harshajustin2@gmail.com' },
-  { icon: Linkedin, text: 'LinkedIn Profile', href: 'https://www.linkedin.com/in/harsha-vardhan-027413304/' },
-  { icon: Github, text: 'GitHub Profile', href: 'https://github.com/harshajustin/ATS-Resume-Expert' },
-  { icon: Code2, text: 'LeetCode Profile', href: 'https://leetcode.com/u/22eg107a47/' },
+  { 
+    icon: Mail, 
+    text: 'harshajustin2@gmail.com', 
+    href: 'mailto:harshajustin2@gmail.com',
+    label: 'Email'
+  },
+  {
+    icon: MapPin,
+    text: 'Hyderabad, Telangana',
+    href: '#',
+    label: 'Location'
+  },
+  { 
+    icon: Linkedin, 
+    text: 'Harsha Vardhanu Parnandi', 
+    href: 'https://www.linkedin.com/in/harshavardhanuparnandi',
+    label: 'LinkedIn'
+  },
+  { 
+    icon: Github, 
+    text: 'harshajustin', 
+    href: 'https://github.com/harshajustin',
+    label: 'GitHub'
+  },
+  { 
+    icon: Code2, 
+    text: 'LeetCode', 
+    href: 'https://leetcode.com/harshajustin',
+    label: 'LeetCode'
+  },
 ];
 
 const ContactInfo = () => {
   return (
-    <div className="flex flex-col justify-center space-y-8">
-      {contactLinks.map(({ icon: Icon, text, href }) => (
-        <div key={text} className="flex items-center space-x-4">
-          <Icon className="w-6 h-6 text-blue-600" />
-          <a
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-gray-900 transition-colors"
-          >
-            {text}
-          </a>
+    <div className="p-8 bg-secondary-50 dark:bg-secondary-900/30 h-full flex flex-col justify-between">
+      <div>
+        <h3 className="text-xl font-semibold text-secondary-900 dark:text-white mb-6">Contact Information</h3>
+        
+        <div className="space-y-6">
+          {contactLinks.map(({ icon: Icon, text, href, label }) => (
+            <div key={label} className="flex items-center">
+              <div className="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mr-4">
+                <Icon className="w-5 h-5 text-primary-600 dark:text-primary-400" />
+              </div>
+              <div>
+                <p className="text-xs text-secondary-500 dark:text-secondary-400 mb-0.5">{label}</p>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-secondary-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                >
+                  {text}
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
+      
+      <div className="mt-8 pt-6 border-t border-secondary-200 dark:border-secondary-700">
+        <div className="space-y-4">
+          <div className="flex items-start">
+            <MapPin className="w-5 h-5 text-primary-500 mt-0.5 mr-3" />
+            <p className="text-secondary-600 dark:text-secondary-300">
+              India
+            </p>
+          </div>
+          
+          <div className="flex items-start">
+            <Calendar className="w-5 h-5 text-primary-500 mt-0.5 mr-3" />
+            <p className="text-secondary-600 dark:text-secondary-300">
+              Available from June 2025
+            </p>
+          </div>
+          
+          <div className="flex items-start">
+            <Clock className="w-5 h-5 text-primary-500 mt-0.5 mr-3" />
+            <p className="text-secondary-600 dark:text-secondary-300">
+              Response time: &lt; 24 hours
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
