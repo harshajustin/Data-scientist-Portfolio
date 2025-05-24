@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend:wght@100..900&family=JetBrains+Mono:wght@100..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,26 +8,68 @@
   html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    scroll-padding-top: 80px; /* Account for fixed header */
   }
-
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
     overflow-x: hidden;
     width: 100%;
+    @apply text-secondary-800 text-secondary-100 bg-secondary-950 transition-colors duration-300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold;
+  }
+
+  ::selection {
+    @apply bg-primary-200 dark:bg-primary-800;
   }
 }
 
 @layer components {
   .glass-effect {
-    @apply bg-white/80 backdrop-blur-lg;
+    @apply bg-white/80 dark:bg-secondary-900/80 backdrop-blur-lg;
   }
 
   .container-padding {
     @apply px-4 sm:px-6 lg:px-8;
   }
+  
+  .section-title {
+    @apply text-4xl font-bold mb-4 text-secondary-900 dark:text-white relative pb-4 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-20 after:h-1 after:bg-primary-600 after:rounded-full;
+  }
+
+  .section-title-centered {
+    @apply text-4xl font-bold mb-4 text-secondary-900 dark:text-white relative pb-4 after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:w-20 after:h-1 after:bg-primary-600 after:rounded-full text-center;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-white dark:bg-secondary-800 border border-secondary-200 dark:border-secondary-700 hover:border-primary-500 dark:hover:border-primary-400 text-secondary-900 dark:text-secondary-100 font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-secondary-800 rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden border border-secondary-100 dark:border-secondary-700;
+  }
 }
 
 /* Animations */
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite ease-in-out;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -36,6 +80,79 @@
     transform: translateY(0);
   }
 }
+
+@keyframes blob {
+  0% {
+    transform: scale(1) translate(0px, 0px);
+  }
+  33% {
+    transform: scale(1.1) translate(30px, -50px);
+  }
+  66% {
+    transform: scale(0.9) translate(-20px, 20px);
+  }
+  100% {
+    transform: scale(1) translate(0px, 0px);
+  }
+}
+
+.animate-blob {
+  animation: blob 15s infinite alternate;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.8s ease-in-out forwards;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.5s ease-in-out forwards;
+}
+
+/* Stagger animations for multiple elements */
+.stagger-animation > * {
+  opacity: 0;
+}
+
+.stagger-animation > *:nth-child(1) { animation: fadeIn 0.5s ease-out 0.1s forwards; }
+.stagger-animation > *:nth-child(2) { animation: fadeIn 0.5s ease-out 0.2s forwards; }
+.stagger-animation > *:nth-child(3) { animation: fadeIn 0.5s ease-out 0.3s forwards; }
+.stagger-animation > *:nth-child(4) { animation: fadeIn 0.5s ease-out 0.4s forwards; }
+.stagger-animation > *:nth-child(5) { animation: fadeIn 0.5s ease-out 0.5s forwards; }
+.stagger-animation > *:nth-child(6) { animation: fadeIn 0.5s ease-out 0.6s forwards; }
 
 .animate-fadeIn {
   animation: fadeIn 0.6s ease-out forwards;
