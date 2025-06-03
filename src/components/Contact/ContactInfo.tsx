@@ -26,12 +26,6 @@ const contactLinks = [
     href: 'https://github.com/harshajustin',
     label: 'GitHub'
   },
-  { 
-    icon: Code2, 
-    text: 'LeetCode', 
-    href: 'https://leetcode.com/harshajustin',
-    label: 'LeetCode'
-  },
 ];
 
 const ContactInfo = () => {

@@ -4,7 +4,7 @@ export const projects = [
     description: 'Engineered a real-time AI chatbot for college websites, automating information retrieval for 500+ students. Implemented web scraping and NLP based parsing to extract and summarize official college updates with 95% accuracy. Leveraged BERT embeddings for semantic search, improving query relevance by 40% within a PostgreSQL knowledge base. Integrated Gemini 1.5 Flash API, reducing response time by 30% while maintaining content summarization efficiency.',
     image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1800&q=80',
     category: 'Generative AI',
-    tools: ['BERT', 'PostgreSQL', 'Gemini 1.5 Flash API', 'Web Scraping', 'NLP'],
+    tools: ['BERT', 'PostgreSQL', 'Gemini 1.5 Flash API', 'NLP'],
     github: "https://github.com/harshajustin/EduBot",
     demo: '#'
   },
