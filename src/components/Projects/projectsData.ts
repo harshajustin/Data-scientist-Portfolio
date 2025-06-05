@@ -6,7 +6,7 @@ export const projects = [
     category: 'Generative AI',
     tools: ['BERT', 'PostgreSQL', 'Gemini 1.5 Flash API', 'NLP'],
     github: "https://github.com/harshajustin/EduBot",
-    demo: '#'
+    demo: 'https://auedubot.netlify.app/'
   },
   {
     title: 'Applicant Tracking System Expert',
