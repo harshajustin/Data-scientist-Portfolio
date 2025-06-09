@@ -40,7 +40,7 @@ function App() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">              <h3 className="text-2xl font-bold mb-2">Harsha Vardhanu Parnandi</h3>
               <p className="text-secondary-300">B.Tech, Artificial Intelligence & Machine Learning</p>
-              <p className="text-secondary-300 mt-2">harshajustin2@gmail.com | +767-1016609</p>
+              <p className="text-secondary-300 mt-2">harshajustin2@gmail.com | +91 7671016609</p>
               <p className="text-secondary-300">Anurag University, Hyderabad, Telangana</p>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
@@ -54,17 +54,20 @@ function App() {
               </div>
               <div>
                 <h4 className="text-lg font-medium mb-3 text-white">Connect</h4>
-                <ul className="space-y-2">                  <li><a href="https://linkedin.com/in/harshavardhanuparnandi" target="_blank" rel="noopener noreferrer" className="text-secondary-300 hover:text-white transition-colors">LinkedIn</a></li>
+                <ul className="space-y-2">
+                  <li><a href="https://linkedin.com/in/harshavardhanuparnandi" target="_blank" rel="noopener noreferrer" className="text-secondary-300 hover:text-white transition-colors">LinkedIn</a></li>
                   <li><a href="https://github.com/harshajustin" target="_blank" rel="noopener noreferrer" className="text-secondary-300 hover:text-white transition-colors">GitHub</a></li>
-                  <li><a href="https://leetcode.com/harshajustin" target="_blank" rel="noopener noreferrer" className="text-secondary-300 hover:text-white transition-colors">LeetCode</a></li>
+                  <li><a href="https://leetcode.com/harshajustin2" target="_blank" rel="noopener noreferrer" className="text-secondary-300 hover:text-white transition-colors">LeetCode</a></li>
                   <li><a href="#contact" className="text-secondary-300 hover:text-white transition-colors">Contact</a></li>
                 </ul>
               </div>
             </div>
-          </div>          <div className="border-t border-secondary-700 mt-8 pt-6 text-center sm:text-left">
+          </div>
+          <div className="border-t border-secondary-700 mt-8 pt-6 text-center sm:text-left">
             <p>© {new Date().getFullYear()} Harsha Vardhanu Parnandi. All rights reserved.</p>
           </div>
-        </div>      </footer>
+        </div>
+      </footer>
     </div>
   );
 }

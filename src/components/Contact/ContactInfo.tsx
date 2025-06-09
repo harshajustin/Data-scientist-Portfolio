@@ -1,5 +1,4 @@
-import React from 'react';
-import { Mail, Linkedin, Github, Code2, MapPin, Calendar, Clock } from 'lucide-react';
+import { Mail, Linkedin, Github, MapPin, Calendar, Clock } from 'lucide-react';
 
 const contactLinks = [
   { 
